@@ -1,56 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>This Is Art Elias - Home</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThisIsArtElias - Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <div class="logo">thisisartelias</div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="nav-link" data-en="Home" data-nl="Start">Home</a></li>
-      <li><a href="about.html" class="nav-link" data-en="About" data-nl="Over">About</a></li>
-      <li><a href="gallery.html" class="nav-link" data-en="Gallery" data-nl="Galerij">Gallery</a></li>
-      <li><a href="story.html" class="nav-link" data-en="Story" data-nl="Verhaal">Story</a></li>
-      <li><a href="contact.html" class="nav-link" data-en="Contact" data-nl="Contact">Contact</a></li>
-    </ul>
-    <div class="toggle-buttons">
-      <button id="theme-toggle">🌙</button>
-      <button id="lang-toggle">NL</button>
-    </div>
-  </nav>
-</header>
+    <header>
+        <nav>
+            <div class="logo">ThisIsArtElias</div>
+            <ul>
+                <li><a href="index.html" data-key="home">Home</a></li>
+                <li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
+                <li><a href="my-story.html" data-key="myStory">My Story</a></li>
+                <li><a href="commissions.html" data-key="commissions">Commissions</a></li>
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+                <li><a href="news.html" data-key="news">News</a></li>
+            </ul>
+            <button id="lang-switch">NL</button>
+        </nav>
+    </header>
 
-<section class="hero">
-  <h1 data-en="Art. Vision. Emotion." data-nl="Kunst. Visie. Emotie.">Art. Vision. Emotion.</h1>
-  <p data-en="Welcome to the world of Elias — where creativity meets minimalism and each piece tells a story." 
-     data-nl="Welkom in de wereld van Elias — waar creativiteit minimalisme ontmoet en elk stuk een verhaal vertelt.">
-    Welcome to the world of Elias — where creativity meets minimalism and each piece tells a story.
-  </p>
-  <a href="#gallery" class="btn" data-en="Explore Gallery" data-nl="Galerij bekijken">Explore Gallery</a>
-</section>
+    <main>
+        <section class="hero">
+            <h1 data-key="tagline">Abstract art that speaks to the soul</h1>
+            <p data-key="intro">Elias van Artelias creates unique abstract paintings for people who love art that stands out. From humble beginnings drawing lines at age ten, his work now graces exhibitions, public spaces, and private collections.</p>
+            <a href="portfolio.html" class="btn" data-key="viewPortfolio">View Portfolio</a>
+            <a href="commissions.html" class="btn" data-key="getCommissions">Get Commissions</a>
+        </section>
+    </main>
 
-<section class="section" id="intro">
-  <h2 data-en="Why Art Matters" data-nl="Waarom Kunst Belangrijk Is">Why Art Matters</h2>
-  <p data-en="Art is more than aesthetics; it is a reflection of our emotions, a connection to humanity, and a timeless expression of individuality."
-     data-nl="Kunst is meer dan esthetiek; het is een reflectie van onze emoties, een verbinding met de mensheid en een tijdloze uitdrukking van individualiteit.">
-    Art is more than aesthetics; it is a reflection of our emotions, a connection to humanity, and a timeless expression of individuality.
-  </p>
-  <p data-en="Through minimalism and abstraction, Elias creates works that speak quietly yet powerfully to the viewer."
-     data-nl="Door minimalisme en abstractie creëert Elias werken die stil maar krachtig tot de kijker spreken.">
-    Through minimalism and abstraction, Elias creates works that speak quietly yet powerfully to the viewer.
-  </p>
-</section>
+    <footer>
+        <p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
+    </footer>
 
-<footer>
-  <p>© 2026 This Is Art Elias. All rights reserved.</p>
-  <p>Follow me on <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
