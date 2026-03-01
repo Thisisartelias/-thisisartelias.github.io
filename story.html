@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>...</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThisIsArtElias - My Story</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header>...</header>
-<section class="section" id="story">
-<h2 data-en="My Story" data-nl="Mijn Verhaal">My Story</h2>
-<div class="cards">
-<div class="card">
-<h3 data-en="Childhood Inspiration" data-nl="Jeugd Inspiratie">Childhood Inspiration</h3>
-<p data-en="Elias discovered art early in life, drawing inspiration from nature and everyday life." data-nl="Elias ontdekte kunst op jonge leeftijd, geïnspireerd door de natuur en het dagelijks leven.">Elias discovered art early in life, drawing inspiration from nature and everyday life.</p>
-</div>
-<div class="card">
-<h3 data-en="Creative Journey" data-nl="Creatieve Reis">Creative Journey</h3>
-<p data-en="Through years of experimentation and study, Elias developed a unique style blending minimalism and emotional depth." data-nl="Door jaren van experimentatie en studie ontwikkelde Elias een unieke stijl die minimalisme en emotionele diepte combineert.">Through years of experimentation and study, Elias developed a unique style blending minimalism and emotional depth.</p>
-</div>
-<div class="card">
-<h3 data-en="Exhibitions & Recognition" data-nl="Tentoonstellingen & Erkenning">Exhibitions & Recognition</h3>
-<p data-en="His works have been featured in galleries worldwide, earning critical acclaim for their subtle yet powerful presence." data-nl="Zijn werken zijn wereldwijd te zien geweest in galerieën en hebben lof ontvangen voor hun subtiele maar krachtige aanwezigheid.">His works have been featured in galleries worldwide, earning critical acclaim for their subtle yet powerful presence.</p>
-</div>
-</div>
-</section>
+<header>
+    <nav>
+        <div class="logo">ThisIsArtElias</div>
+        <ul>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
+            <li><a href="my-story.html" data-key="myStory">My Story</a></li>
+            <li><a href="commissions.html" data-key="commissions">Commissions</a></li>
+            <li><a href="contact.html" data-key="contact">Contact</a></li>
+            <li><a href="news.html" data-key="news">News</a></li>
+        </ul>
+        <button id="lang-switch">NL</button>
+    </nav>
+</header>
+
+<main>
+    <section class="my-story">
+        <h2 data-key="myStoryTitle">My Story</h2>
+        <p data-key="bioEN">
+            I started making art when I was ten years old. I would draw lines on paper. This was something I did for fun.. It did not take long for me to think more about what I was doing.
+            <br><br>
+            By the time I was eleven years old I had a plan for my art. I wanted to sell my drawings. So I started selling them in the city center. This was a deal for me. It helped me learn about being creative. It also helped me want to do more.
+            <br><br>
+            When I was twelve years old I had my first art exhibition. Seeing my art on the wall was really cool. My art has also been featured in a local magazine (around age 12). It made me want to do even better. So I started making art that was bigger and more detailed.
+            <br><br>
+            Now my art is shown in different places. You can see it in community spaces. Even in a barber shop and a social work organization building.
+            <br><br>
+            Today I make abstract paintings, for people who like art that is one of a kind. I want each painting to be unique and to stand out. Abstract art is what I love to do. It started with random lines but now it is a big part of my life.
+        </p>
+
+        <h3 data-key="exhibitionsTitle">My Local Exhibitions</h3>
+        <ul data-key="exhibitionsList">
+            <li>Wijkcentrum Waterkracht (Zutphen, Netherlands)</li>
+            <li>Hop In House Perspectief (Zutphen, Netherlands)</li>
+            <li>Alley Cat Barbershop (Zutphen, Netherlands)</li>
+            <li>Ixta Noa (Zutphen, Netherlands)</li>
+        </ul>
+
+        <h3 data-key="projectsTitle">My Paid Projects</h3>
+        <ul data-key="projectsList">
+            <li>One canvas (100x120cm), for a local business.</li>
+            <li>Coming soon</li>
+        </ul>
+    </section>
+</main>
+
 <footer>
-<p>© 2026 This Is Art Elias. All rights reserved.</p>
-<p>Follow me on <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></p>
+    <p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
 </footer>
-<script src="script.js"></script>
+
+<script src="js/main.js"></script>
+<script>
+const storyTranslations = {
+    en: {},
+    nl: {
+        myStoryTitle: "Mijn Verhaal",
+        bioEN: `Ik begon met kunst maken toen ik tien jaar oud was. Ik tekende lijnen op papier. Dit deed ik voor de lol. Het duurde niet lang voordat ik meer begon na te denken over wat ik deed.
+        <br><br>
+        Toen ik elf jaar oud was had ik een plan voor mijn kunst. Ik wilde mijn tekeningen verkopen. Dus begon ik ze in het stadscentrum te verkopen. Dit hielp me creatief te leren zijn en motiveerde me om meer te doen.
+        <br><br>
+        Toen ik twaalf jaar oud was had ik mijn eerste kunstexpositie. Mijn kunst aan de muur zien was geweldig. Mijn werk is ook in een lokaal tijdschrift verschenen (rond 12 jaar oud). Dit maakte me nog beter willen worden. Dus begon ik grotere en gedetailleerdere kunstwerken te maken.
+        <br><br>
+        Nu wordt mijn kunst op verschillende plekken getoond, waaronder gemeenschapsruimtes, een kapperszaak en een sociaal werkorganisatiegebouw.
+        <br><br>
+        Tegenwoordig maak ik abstracte schilderijen voor mensen die van unieke kunst houden. Ik wil dat elk schilderij uniek is en opvalt. Abstracte kunst is mijn passie. Het begon met willekeurige lijnen maar is nu een groot deel van mijn leven.`,
+        exhibitionsTitle: "Mijn Lokale Tentoonstellingen",
+        exhibitionsList: `<li>Wijkcentrum Waterkracht (Zutphen, Nederland)</li>
+        <li>Hop In House Perspectief (Zutphen, Nederland)</li>
+        <li>Alley Cat Barbershop (Zutphen, Nederland)</li>
+        <li>Ixta Noa (Zutphen, Nederland)</li>`,
+        projectsTitle: "Mijn Betaalde Projecten",
+        projectsList: `<li>Een canvas (100x120cm), voor een lokaal bedrijf.</li>
+        <li>Komt binnenkort</li>`
+    }
+};
+
+document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(storyTranslations[currentLang] && storyTranslations[currentLang][key]){
+        el.innerHTML = storyTranslations[currentLang][key];
+    }
+});
+</script>
 </body>
 </html>
