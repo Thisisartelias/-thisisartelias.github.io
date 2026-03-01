@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>...</head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThisIsArtElias - Commissions</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header>...</header>
-<section class="section" id="contact">
-<h2 data-en="Contact" data-nl="Contact">Contact</h2>
-<p data-en="I'd love to hear from you! Send me a message and let's connect." data-nl="Ik hoor graag van u! Stuur mij een bericht en laten we contact maken.">I'd love to hear from you! Send me a message and let's connect.</p>
-<form action="https://formspree.io/f/yourformid" method="POST">
-<input type="text" name="name" placeholder="Your Name / Uw Naam" required>
-<input type="email" name="email" placeholder="Your Email / Uw Email" required>
-<textarea name="message" rows="5" placeholder="Your Message / Uw Bericht" required></textarea>
-<button type="submit" class="submit-btn" data-en="Send Message" data-nl="Bericht Verzenden">Send Message</button>
-</form>
+<header>
+    <nav>
+        <div class="logo">ThisIsArtElias</div>
+        <ul>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
+            <li><a href="my-story.html" data-key="myStory">My Story</a></li>
+            <li><a href="commissions.html" data-key="commissions">Commissions</a></li>
+            <li><a href="contact.html" data-key="contact">Contact</a></li>
+            <li><a href="news.html" data-key="news">News</a></li>
+        </ul>
+        <button id="lang-switch">NL</button>
+    </nav>
+</header>
+
+<main>
+<section class="commissions">
+    <h2 data-key="commissionsTitle">Commissions</h2>
+    <p data-key="commissionsIntro">Please fill in the form to request a custom artwork. Include details like size, style, and any reference images.</p>
+
+    <form action="mailto:ContactArtElias@gmail.com" method="post" enctype="text/plain">
+        <label data-key="nameLabel">Name:</label>
+        <input type="text" name="Name" required>
+
+        <label data-key="emailLabel">Email:</label>
+        <input type="email" name="Email" required>
+
+        <label data-key="detailsLabel">Artwork Details:</label>
+        <textarea name="Details" rows="5" required></textarea>
+
+        <button type="submit" data-key="submitBtn">Send Request</button>
+    </form>
 </section>
+</main>
+
 <footer>
-<p>© 2026 This Is Art Elias. All rights reserved.</p>
-<p>Follow me on <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></p>
+<p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
 </footer>
-<script src="script.js"></script>
+
+<script src="js/main.js"></script>
+<script>
+const commissionsTranslations = {
+    en: {},
+    nl: {
+        commissionsTitle: "Commissies",
+        commissionsIntro: "Vul het formulier in om een op maat gemaakt kunstwerk aan te vragen. Voeg details toe zoals grootte, stijl en eventuele referentiebeelden.",
+        nameLabel: "Naam:",
+        emailLabel: "E-mail:",
+        detailsLabel: "Details van het Kunstwerk:",
+        submitBtn: "Verstuur Aanvraag"
+    }
+};
+document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(commissionsTranslations[currentLang] && commissionsTranslations[currentLang][key]){
+        el.textContent = commissionsTranslations[currentLang][key];
+    }
+});
+</script>
 </body>
 </html>
