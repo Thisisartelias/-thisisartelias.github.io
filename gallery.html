@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>...</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThisIsArtElias - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header>...</header>
-<section class="section" id="gallery">
-<h2 data-en="Gallery" data-nl="Galerij">Gallery</h2>
-<div class="cards">
-<div class="card">Artwork 01 - Description</div>
-<div class="card">Artwork 02 - Description</div>
-<div class="card">Artwork 03 - Description</div>
-<div class="card">Artwork 04 - Description</div>
-<div class="card">Artwork 05 - Description</div>
-<div class="card">Artwork 06 - Description</div>
-<div class="card">Artwork 07 - Description</div>
-<div class="card">Artwork 08 - Description</div>
-</div>
-</section>
+<header>
+    <nav>
+        <div class="logo">ThisIsArtElias</div>
+        <ul>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
+            <li><a href="my-story.html" data-key="myStory">My Story</a></li>
+            <li><a href="commissions.html" data-key="commissions">Commissions</a></li>
+            <li><a href="contact.html" data-key="contact">Contact</a></li>
+            <li><a href="news.html" data-key="news">News</a></li>
+        </ul>
+        <button id="lang-switch">NL</button>
+    </nav>
+</header>
+
+<main>
+    <section class="portfolio-grid">
+        <h2 data-key="portfolioTitle">Portfolio</h2>
+        <div class="grid">
+            <img src="images/placeholder1.jpg" alt="Artwork 1">
+            <img src="images/placeholder2.jpg" alt="Artwork 2">
+            <img src="images/placeholder3.jpg" alt="Artwork 3">
+            <img src="images/placeholder4.jpg" alt="Artwork 4">
+            <img src="images/placeholder5.jpg" alt="Artwork 5">
+            <img src="images/placeholder6.jpg" alt="Artwork 6">
+        </div>
+    </section>
+</main>
+
 <footer>
-<p>© 2026 This Is Art Elias. All rights reserved.</p>
-<p>Follow me on <a href="https://instagram.com/yourusername" target="_blank">Instagram</a></p>
+    <p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
 </footer>
-<script src="script.js"></script>
+
+<script src="js/main.js"></script>
+<script>
+const portfolioTranslations = {
+    en: { portfolioTitle: "Portfolio" },
+    nl: { portfolioTitle: "Portfolio" }
+};
+document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(portfolioTranslations[currentLang] && portfolioTranslations[currentLang][key]){
+        el.textContent = portfolioTranslations[currentLang][key];
+    }
+});
+</script>
 </body>
 </html>
