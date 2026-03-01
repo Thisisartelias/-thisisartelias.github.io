@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThisIsArtElias - Contact</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">ThisIsArtElias</div>
+<ul>
+<li><a href="index.html" data-key="home">Home</a></li>
+<li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
+<li><a href="my-story.html" data-key="myStory">My Story</a></li>
+<li><a href="commissions.html" data-key="commissions">Commissions</a></li>
+<li><a href="contact.html" data-key="contact">Contact</a></li>
+<li><a href="news.html" data-key="news">News</a></li>
+</ul>
+<button id="lang-switch">NL</button>
+</nav>
+</header>
+
+<main>
+<section class="contact-page">
+<h2 data-key="contactTitle">Contact</h2>
+<p data-key="contactIntro">You can reach me via email or Instagram.</p>
+<ul>
+<li data-key="emailText">Email: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></li>
+<li data-key="instagramText">Instagram: <a href="https://instagram.com/thisisartelias">@thisisartelias</a></li>
+</ul>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const contactTranslations = {
+    en: {},
+    nl: {
+        contactTitle: "Contact",
+        contactIntro: "Je kunt mij bereiken via e-mail of Instagram.",
+        emailText: "E-mail: <a href='mailto:ContactArtElias@gmail.com'>ContactArtElias@gmail.com</a>",
+        instagramText: "Instagram: <a href='https://instagram.com/thisisartelias'>@thisisartelias</a>"
+    }
+};
+document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(contactTranslations[currentLang] && contactTranslations[currentLang][key]){
+        el.innerHTML = contactTranslations[currentLang][key];
+    }
+});
+</script>
+</body>
+</html>
