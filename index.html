@@ -1,40 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThisIsArtElias - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThisIsArtElias</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Reset & Base */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Montserrat', sans-serif; background: #111; color: #eee; line-height:1.6; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display:block; }
+
+  /* Navbar */
+  nav { display:flex; justify-content: space-between; align-items: center; padding:1rem 2rem; background:#111; position:fixed; width:100%; top:0; z-index:1000; }
+  nav .logo { font-weight:700; font-size:1.5rem; letter-spacing:2px; }
+  nav ul { display:flex; gap:2rem; }
+  nav ul li { list-style:none; }
+  nav ul li a:hover { color:#aaa; }
+
+  /* Hero */
+  .hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#111; }
+  .hero h1 { font-size:4rem; margin-bottom:1rem; font-weight:700; }
+  .hero p { font-size:1.2rem; max-width:600px; margin-bottom:2rem; color:#ccc; }
+  .hero a { padding:0.8rem 2rem; border:2px solid #eee; color:#eee; transition:0.3s; }
+  .hero a:hover { background:#eee; color:#111; }
+
+  /* Sections */
+  section { padding:6rem 2rem; max-width:1200px; margin:0 auto; }
+
+  h2 { font-size:2.5rem; margin-bottom:2rem; text-align:center; font-weight:700; }
+
+  /* Portfolio */
+  .portfolio-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
+  .portfolio-grid img { width:100%; border:2px solid #333; cursor:pointer; transition: transform 0.3s, border 0.3s; }
+  .portfolio-grid img:hover { transform: scale(1.05); border-color:#eee; }
+
+  /* Modal */
+  .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; }
+  .modal img { max-width:90%; max-height:80%; }
+  .modal .close { position:absolute; top:2rem; right:2rem; font-size:2rem; cursor:pointer; color:#eee; }
+
+  /* My Story */
+  .story p { max-width:700px; margin:1rem auto; color:#ccc; text-align:center; }
+
+  /* Commissions */
+  .commission-form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
+  .commission-form input, .commission-form textarea, .commission-form button { padding:1rem; border:none; border-radius:4px; }
+  .commission-form input, .commission-form textarea { background:#222; color:#eee; }
+  .commission-form button { background:#eee; color:#111; font-weight:700; cursor:pointer; transition:0.3s; }
+  .commission-form button:hover { background:#ccc; }
+
+  /* News */
+  .news-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
+  .news-item { border:2px solid #333; padding:1rem; transition: border 0.3s; }
+  .news-item:hover { border-color:#eee; }
+
+  /* Contact */
+  .contact-form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
+  .contact-form input, .contact-form textarea, .contact-form button { padding:1rem; border:none; border-radius:4px; }
+  .contact-form input, .contact-form textarea { background:#222; color:#eee; }
+  .contact-form button { background:#eee; color:#111; font-weight:700; cursor:pointer; transition:0.3s; }
+  .contact-form button:hover { background:#ccc; }
+
+  /* Footer */
+  footer { text-align:center; padding:2rem; color:#777; border-top:1px solid #333; margin-top:4rem; }
+
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ThisIsArtElias</div>
-            <ul>
-                <li><a href="index.html" data-key="home">Home</a></li>
-                <li><a href="portfolio.html" data-key="portfolio">Portfolio</a></li>
-                <li><a href="my-story.html" data-key="myStory">My Story</a></li>
-                <li><a href="commissions.html" data-key="commissions">Commissions</a></li>
-                <li><a href="contact.html" data-key="contact">Contact</a></li>
-                <li><a href="news.html" data-key="news">News</a></li>
-            </ul>
-            <button id="lang-switch">NL</button>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h1 data-key="tagline">Abstract art that speaks to the soul</h1>
-            <p data-key="intro">Elias van Artelias creates unique abstract paintings for people who love art that stands out. From humble beginnings drawing lines at age ten, his work now graces exhibitions, public spaces, and private collections.</p>
-            <a href="portfolio.html" class="btn" data-key="viewPortfolio">View Portfolio</a>
-            <a href="commissions.html" class="btn" data-key="getCommissions">Get Commissions</a>
-        </section>
-    </main>
+<nav>
+  <div class="logo">ThisIsArtElias</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#story">My Story</a></li>
+    <li><a href="#commissions">Commissions</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <footer>
-        <p>&copy; 2026 ThisIsArtElias | <a href="https://instagram.com/thisisartelias">Instagram</a> | Contact: <a href="mailto:ContactArtElias@gmail.com">ContactArtElias@gmail.com</a></p>
-    </footer>
+<!-- Hero -->
+<section class="hero" id="home">
+  <h1>ThisIsArtElias</h1>
+  <p>Exploring abstract forms, bold textures, and modern aesthetics. Commissions available.</p>
+  <a href="#portfolio">View Portfolio</a>
+</section>
 
-    <script src="js/main.js"></script>
+<!-- Portfolio -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio-grid">
+    <img src="art1.jpg" alt="Art 1">
+    <img src="art2.jpg" alt="Art 2">
+    <img src="art3.jpg" alt="Art 3">
+    <img src="art4.jpg" alt="Art 4">
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span class="close" id="close">&times;</span>
+  <img id="modal-img" src="" alt="Expanded Art">
+</div>
+
+<!-- My Story -->
+<section id="story" class="story">
+  <h2>My Story</h2>
+  <p>Hello, I'm Elias, an abstract artist exploring the intersection of emotion and form. My work captures the subtle tension between light and shadow, color and absence, chaos and order.</p>
+  <p>Each piece is a journey, reflecting the process of creation and the depth of human expression.</p>
+</section>
+
+<!-- Commissions -->
+<section id="commissions">
+  <h2>Commissions</h2>
+  <p style="text-align:center; color:#ccc;">Interested in a personalized piece? Fill out the form below and let's create together.</p>
+  <form class="commission-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Describe your commission..." rows="6" required></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<!-- News -->
+<section id="news">
+  <h2>News</h2>
+  <div class="news-grid">
+    <div class="news-item">
+      <h3>Exhibition in Berlin</h3>
+      <p>Join me for my latest exhibition exploring modern abstract textures.</p>
+    </div>
+    <div class="news-item">
+      <h3>New Art Release</h3>
+      <p>Check out my newest series focusing on minimalism and contrast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message..." rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2026 ThisIsArtElias. All Rights Reserved.
+</footer>
+
+<script>
+  // Portfolio Modal
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeBtn = document.getElementById('close');
+  const images = document.querySelectorAll('.portfolio-grid img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', e => {
+    if(e.target === modal) modal.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
