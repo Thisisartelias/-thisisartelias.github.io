@@ -73,7 +73,7 @@ nav a:hover {
   font-size: 1.3rem;
   max-width: 700px;
   margin: 0 auto 2rem;
-  color: #444;
+  color: #000;
 }
 .btn {
   display: inline-block;
